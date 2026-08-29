@@ -12,3 +12,13 @@ Proyecto del 27 de agosto al 18 de noviembre de 2026, organizado en **iteracione
 | I4 | 8 – 21 oct | 3 · Implementación (sprint 2) | Prototipo navegable completo, pull requests y programación en pares, sprint backlog ejecutado |
 | I5 | 22 oct – 4 nov | 4 · Pruebas | Plan y reporte de pruebas de usabilidad |
 | I6 | 12 – 18 nov | 5 · Implantación | Despliegue simulado, guía de usuario, informe financiero, presentación final |
+
+## Hitos con el cliente
+
+| Hito | Fecha | Qué se presenta |
+|---|---|---|
+| Seguimiento 1 | jueves 24 de septiembre | Análisis y diseño |
+| Seguimiento 2 | 19 – 24 de octubre | Implementación |
+| Seguimiento 3 y presentación final | 16 – 21 de noviembre | Pruebas, implantación y cierre |
+
+Además, revisiones de avance informales cada una o dos semanas.
