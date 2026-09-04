@@ -1,6 +1,6 @@
 # Cronograma del proyecto
 
-Proyecto del 27 de agosto al 18 de noviembre de 2026, organizado en **iteraciones quincenales**. Cada fase técnica cierra dentro de una iteración, y los seguimientos con el cliente caen al final de una iteración para que siempre haya algo terminado que mostrar.
+Proyecto del 27 de agosto al 19 de noviembre de 2026, organizado en **iteraciones quincenales**. Cada fase técnica cierra dentro de una iteración, y los seguimientos con el cliente caen al final de una iteración para que siempre haya algo terminado que mostrar.
 
 ## Iteraciones
 
@@ -11,7 +11,7 @@ Proyecto del 27 de agosto al 18 de noviembre de 2026, organizado en **iteracione
 | I3 | 24 sep – 7 oct | 3 · Implementación (sprint 1) | Repositorio estructurado, estándares de codificación, patrones de GUI, primeras pantallas navegables |
 | I4 | 8 – 21 oct | 3 · Implementación (sprint 2) | Prototipo navegable completo, pull requests y programación en pares, sprint backlog ejecutado |
 | I5 | 22 oct – 4 nov | 4 · Pruebas | Plan y reporte de pruebas de usabilidad |
-| I6 | 12 – 18 nov | 5 · Implantación | Despliegue simulado, guía de usuario, informe financiero, presentación final |
+| I6 | 12 – 19 nov | 5 · Implantación | Despliegue simulado, guía de usuario, informe financiero, presentación final |
 
 ## Hitos con el cliente
 
@@ -29,7 +29,7 @@ La semana del **5 al 11 de noviembre** queda sin entregables asignados. Va **ant
 
 ```mermaid
 gantt
-    title SiembraCo App · 27-ago a 18-nov 2026
+    title SiembraCo App · 27-ago a 19-nov 2026
     dateFormat YYYY-MM-DD
     axisFormat %d-%b
 
@@ -39,7 +39,7 @@ gantt
     3 Implementación     :a3, 2026-09-24, 2026-10-21
     4 Pruebas            :a4, 2026-10-22, 2026-11-04
     Contingencia         :crit, buf, 2026-11-05, 2026-11-11
-    5 Implantación       :a5, 2026-11-12, 2026-11-18
+    5 Implantación       :a5, 2026-11-12, 2026-11-19
 
     section Seguimientos
     Seguimiento 1        :milestone, m1, 2026-09-24, 1d
