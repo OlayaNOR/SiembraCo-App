@@ -37,3 +37,13 @@ Ninguna funcionalidad del alcance (3.4) quedó en *Could*: son contractuales.
 | RNF-02 | La app no altera el modelo de precios ni los acuerdos con agricultores | Restricción 3.5 | 3 | Ninguna pantalla permite editar precio, plan ni condiciones |
 
 HU-11 no estaba en el documento de análisis: el caso pide explícitamente mostrar fechas estimadas de cosecha y ninguna historia lo cubría.
+
+## Should — 21 puntos
+
+| ID | Historia | Origen | Pts | Criterio de aceptación |
+|---|---|---|---|---|
+| HU-02 | Como cliente, quiero consultar el detalle de la finca donde está mi siembra | Alcance 3.4.2 | 5 | Finca, ubicación, agricultor aliado y condiciones del cultivo |
+| HU-12 | Como cliente, quiero ver con claridad precio, unidades y condiciones de entrega | Problema 3.2 | 3 | Una sola vista, sin cifras sin unidad ni fechas sin formato |
+| HU-08 | Como calidad agrícola, quiero mostrar indicadores de buenas prácticas de cada finca | Stakeholder | 5 | Al menos un indicador BPA con su fecha de verificación |
+| HU-05 | Como cliente, quiero información sobre origen y prácticas sostenibles | Alcance 3.4.5 | 3 | Mensajes educativos asociados a la etapa en curso |
+| HU-04 | Como cliente, quiero simular más volumen, otra frecuencia o SiembraCo Plus | Alcance 3.4.4 | 5 | Muestra el resultado sin ejecutar la compra ni modificar precios |
