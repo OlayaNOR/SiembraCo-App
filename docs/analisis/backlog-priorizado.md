@@ -47,3 +47,21 @@ HU-11 no estaba en el documento de análisis: el caso pide explícitamente mostr
 | HU-08 | Como calidad agrícola, quiero mostrar indicadores de buenas prácticas de cada finca | Stakeholder | 5 | Al menos un indicador BPA con su fecha de verificación |
 | HU-05 | Como cliente, quiero información sobre origen y prácticas sostenibles | Alcance 3.4.5 | 3 | Mensajes educativos asociados a la etapa en curso |
 | HU-04 | Como cliente, quiero simular más volumen, otra frecuencia o SiembraCo Plus | Alcance 3.4.4 | 5 | Muestra el resultado sin ejecutar la compra ni modificar precios |
+
+## Could — 13 puntos (propuestas del equipo)
+
+| ID | Historia | Pts |
+|---|---|---|
+| HU-13 | Línea de tiempo de las etapas ya superadas | 5 |
+| HU-14 | Escalar una duda a soporte desde la pantalla del cultivo, con el contexto cargado | 3 |
+| HU-15 | Comparar la cosecha estimada con ciclos anteriores | 5 |
+
+## Won't (en este MVP)
+
+| Ítem | Por qué queda fuera |
+|---|---|
+| HU-10 — el agricultor registra el avance | El alcance es la app del cliente; el avance se consume de la plataforma (RNF-01) |
+| HU-09 — resolver dudas sin escribir a soporte | Es un resultado esperado, no una historia: pasa a indicador de éxito |
+| Compra o pago dentro de la app | El proceso de compra ya funciona bien |
+| Modificar precios o acuerdos | Prohibido por las restricciones (3.5) |
+| Operación en Guatemala | Cambia normativa y alcance; pendiente de confirmar con el cliente |
