@@ -65,3 +65,22 @@ HU-11 no estaba en el documento de análisis: el caso pide explícitamente mostr
 | Compra o pago dentro de la app | El proceso de compra ya funciona bien |
 | Modificar precios o acuerdos | Prohibido por las restricciones (3.5) |
 | Operación en Guatemala | Cambia normativa y alcance; pendiente de confirmar con el cliente |
+
+## Reparto por iteración
+
+| Iteración | Fechas | Contenido | Puntos |
+|---|---|---|---|
+| I3 — sprint 1 | 24 sep – 7 oct | Todos los Must | 34 |
+| I4 — sprint 2 | 8 – 21 oct | Todos los Should + los Could que quepan | 21 (+13) |
+
+Con 34 puntos comprometidos en I3, el mínimo para cumplir el indicador (80 %) es **28 puntos**.
+
+## Resumen
+
+| Prioridad | Ítems | Puntos | % |
+|---|---|---|---|
+| Must | 7 | 34 | 50 % |
+| Should | 5 | 21 | 31 % |
+| Could | 3 | 13 | 19 % |
+| Won't | 5 | — | — |
+| **Total activos** | **15** | **68** | |
