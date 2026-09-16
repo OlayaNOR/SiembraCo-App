@@ -19,3 +19,22 @@ Las seis categorías son las que nombra la sección 3.6 del caso.
 | | **Total** | **$255.000.000** | **100 %** |
 
 Diseño UX/UI pesa una cuarta parte porque el entregable es un prototipo navegable, no un sistema en producción.
+
+## 2 · Horas y tarifas
+
+| Categoría | Rol | Tarifa/hora | Horas | Total |
+|---|---|---|---|---|
+| 1 · Horas hombre | Analista de negocio | $70.000 | 500 | $35.000.000 |
+| | Arquitecto de software | $110.000 | 300 | $33.000.000 |
+| | Asesor legal / regulatorio (INVIMA) | $130.000 | 160 | $20.800.000 |
+| 2 · Diseño UX/UI | Diseñador UX/UI sénior | $85.000 | 460 | $39.100.000 |
+| | Diseñador UI júnior | $55.000 | 450 | $24.750.000 |
+| 3 · Gestión | Líder de proyecto | $95.000 | 375 | $35.625.000 |
+| 4 · Usabilidad | Especialista en usabilidad | $75.000 | 240 | $18.000.000 |
+| | Incentivos y logística de sesiones con usuarios | — | — | $5.000.000 |
+| 5 · Documentación | Documentador técnico | $50.000 | 400 | $20.000.000 |
+| | Herramientas (diseño, gestión, almacenamiento) × 3 meses | — | — | $2.900.000 |
+| 6 · Contingencias | Reserva | — | — | $20.825.000 |
+| | | | **2.885 h** | **$255.000.000** |
+
+Tarifa promedio ponderada: $78.432/hora. Los roles son perfiles de costo, no integrantes: cada uno de los tres asume varios. La contingencia es la partida de cierre: lo que queda tras asignar las horas.
