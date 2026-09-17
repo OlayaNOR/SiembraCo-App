@@ -9,8 +9,10 @@ Corren durante todo el proyecto.
 | Frente | Responsable | Entregables |
 |---|---|---|
 | Planeación | Valeria Alarcón | Acta de constitución, esquema metodológico, plan de proyecto (roles, cronograma, presupuesto) |
-| Seguimiento | Nicolás Olaya | Reporte cada 2 semanas, control de riesgos, actualización del backlog |
-| Relación con el cliente | Andrew García | Bitácora de reuniones, gestión de cambios, manejo de conflictos |
+| Seguimiento | Andrew García | Reporte cada 2 semanas, control de riesgos, actualización del backlog |
+| Relación con el cliente | Nicolás Olaya | Bitácora de reuniones, gestión de cambios, manejo de conflictos |
+
+> **Cambio del 16-sep:** se intercambiaron Seguimiento y Relación con el cliente entre Andrew y Nicolás, para que el seguimiento quede con quien lleva el backlog.
 
 ## Liderazgo de fases técnicas
 
