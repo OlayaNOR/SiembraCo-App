@@ -84,3 +84,13 @@ Con 34 puntos comprometidos en I3, el mínimo para cumplir el indicador (80 %) e
 | Could | 3 | 13 | 19 % |
 | Won't | 5 | — | — |
 | **Total activos** | **15** | **68** | |
+
+## Dependencias
+
+- **RNF-01** (integración) bloquea HU-01, HU-11, HU-03 y HU-06: sin el dato de la plataforma, esas pantallas no tienen qué mostrar. Es lo primero que hay que resolver en I3.
+- **RNF-02** (no alterar precios) bloquea HU-04 y HU-12.
+- Relacionadas: HU-07 con HU-08 y HU-05 (contenido regulado), HU-10 con RNF-01 (origen del dato), HU-13 con HU-01.
+
+## En el tablero
+
+El backlog está cargado en Jira bajo la épica `SCRUM-5`: cada ticket lleva su criterio de aceptación, los puntos y la prioridad MoSCoW (etiqueta y prioridad nativa: Must = Highest, Should = High, Could = Low, Won't = Lowest).
