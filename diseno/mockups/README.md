@@ -6,3 +6,6 @@ Pantallas de alta fidelidad de la app, con la identidad de SiembraCo y datos de 
 |---|---|---|
 | `01-inicio.png` | Inicio · tu cultivo | HU-01 · HU-11 · HU-07 · RNF-01 |
 | `02-inicio-pendiente.png` | Inicio · actualización pendiente | CA-1.2 · excepción 1 del BPMN |
+| `03-etapas.png` | Etapas del cultivo | HU-11 · HU-05 · RNF-01 |
+| `04-alertas.png` | Centro de alertas | HU-03 · HU-06 · CA-2.3 |
+| `05-push.png` | Notificación push | HU-03 · HU-06 · CA-2.1 |
