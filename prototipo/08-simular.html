@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<title>Simular mi siembra</title>
+<link rel="stylesheet" href="styles.css">
+</head><body class="">
+<div class="pantalla">
+
+<div class="statusbar">
+  <span class="hora">9:41</span>
+  <span class="derecha">
+    <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" y="0" width="3" height="12" rx=".6"/></svg>
+    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 4.5a10 10 0 0 1 14 0M3.5 7.2a6.5 6.5 0 0 1 9 0M6 9.8a3 3 0 0 1 4 0"/></svg>
+    <svg width="26" height="12" viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><rect x=".7" y=".7" width="21" height="10.6" rx="2.5"/><rect x="2.5" y="2.5" width="16" height="7" rx="1.2" fill="currentColor" stroke="none"/><path d="M23.5 4v4" stroke-linecap="round"/></svg>
+  </span>
+</div>
+
+<main class="scroll">
+  
+  <header class="cabecera">
+    <div class="logo-row"><div class="logo peq"><svg class="logo-mark" width="22" height="22" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#2E7D4F"/><path d="M16 25.5V14.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 14.5c0-4.6 3.3-7.6 8.2-7.6 0 4.6-3.3 7.6-8.2 7.6z" fill="#fff"/><path d="M16 18.8c0-3.5-2.6-5.8-6.6-5.8 0 3.5 2.6 5.8 6.6 5.8z" fill="#B9E3C6"/><path d="M9.5 25.5h13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".75"/></svg><span class="logo-txt">Siembra<b>Co</b></span></div></div>
+    <h1>Simular mi siembra</h1>
+  </header>
+
+  <div class="plan-actual">
+    <svg class="ico " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+    <p><b>Tu plan actual:</b> 3,0 kg · un solo ciclo · $ 48.000 · Bogotá</p>
+  </div>
+
+  <section class="card">
+    <p class="etiqueta">¿Y si cambio…?</p>
+
+    <p class="sub margen-s">Cantidad por ciclo</p>
+    <div class="segmentado">
+      <span>3,0 kg</span><span class="sel">5,0 kg</span><span>8,0 kg</span>
+    </div>
+
+    <p class="sub margen-s">Frecuencia</p>
+    <div class="segmentado">
+      <span>Un solo ciclo</span><span class="sel">Cada ciclo</span>
+    </div>
+
+    <div class="plus sel">
+      <div class="plus-ico"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
+      <div class="crece">
+        <p class="paso-titulo">SiembraCo Plus</p>
+        <p class="sub">Prioridad en cosecha y seguimiento ampliado</p>
+      </div>
+      <div class="toggle on"><div class="toggle-bola"></div></div>
+    </div>
+  </section>
+
+  <section class="card resultado">
+    <p class="etiqueta">Resultado de la simulación</p>
+    <dl class="desglose">
+      <div><dt>5,0 kg × $ 16.000</dt><dd>$ 80.000</dd></div>
+      <div><dt>Cada ciclo · −5 %</dt><dd class="menos">− $ 4.000</dd></div>
+      <div><dt>SiembraCo Plus</dt><dd>+ $ 6.000</dd></div>
+    </dl>
+    <div class="total">
+      <div><p class="etiqueta">Por ciclo, estimado</p><p class="fecha">$ 82.000</p></div>
+      <p class="sub">≈ cada 9 semanas</p>
+    </div>
+    <p class="fuente"><svg class="ico " width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9a4.5 4.5 0 0 1 0 9z"/></svg><span>Tarifas vigentes · no modifica tu siembra actual</span></p>
+  </section>
+
+  <a class="boton-pri"><svg class="ico " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg> Continuar en co.siembraco.com</a>
+</main>
+<nav class="tabbar"><a class="tab  "><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Inicio</span></a><a class="tab  "><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 16c0-3-2.5-5-6-5 0 3 2.5 5 6 5z"/></svg><span>Etapas</span></a><a class="tab  "><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg><span>Alertas</span></a><a class="tab activa "><svg class="ico " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>Finca</span></a></nav><div class="home-indicator"></div>
+</div>
+</body></html>
