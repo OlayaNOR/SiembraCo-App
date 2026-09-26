@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/theme/app_theme.dart';
 
 void main() {
   runApp(const SiembraCoApp());
@@ -9,10 +10,11 @@ class SiembraCoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'SiembraCo',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      theme: AppTheme.claro,
+      home: const Scaffold(
         body: Center(child: Text('SiembraCo')),
       ),
     );
