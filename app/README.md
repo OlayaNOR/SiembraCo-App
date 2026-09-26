@@ -27,7 +27,7 @@ Los datos vienen de `PlataformaEjemplo`, que reproduce la respuesta de la plataf
 
 ## Avance del sprint I3
 
-- [ ] Tema y colores de la marca
+- [x] Tema y colores de la marca
 - [ ] Navegación con barra de pestañas
 - [ ] Modelos de datos
 - [ ] Fuente de datos de la plataforma de siembra virtual (solo lectura, RNF-01)
