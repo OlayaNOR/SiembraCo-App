@@ -17,3 +17,19 @@
 |---|---|---|
 | Costo planificado I1 + I2 | $84.700.000 (33,2 % del total) | Desviación ≤ ±10 % |
 | Cumplimiento de sprint | Se empieza a medir en I3, primer sprint con historias del producto | ≥ 80 % |
+
+## Observaciones del cliente
+
+> "Estuvo entendible todo y concluyeron todos los puntos que necesitábamos."
+
+Pidió la presentación en PDF por correo.
+
+## Para el seguimiento 2 (19 – 24 de octubre)
+
+- [ ] Hablar del producto como **software** en desarrollo, no como prototipo.
+- [ ] Presentar el equipo y los roles al inicio.
+- [ ] Cronograma y presupuesto siempre: cuánto costó cada fase y cuánto falta.
+- [ ] Mencionar cada punto que pide el documento del caso, incluida la metodología.
+- [ ] Reportar lo real contra lo planeado, con las desviaciones y su explicación.
+- [ ] Repositorio con historial de commits, pull requests y revisión.
+- [ ] Duración: 15 – 18 minutos.
