@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=390, initial-scale=1">
+<title>Notificaciones push</title>
+<link rel="stylesheet" href="styles.css">
+</head><body class="fondo-bloqueo">
+<div class="pantalla">
+
+<div class="statusbar">
+  <span class="hora">9:41</span>
+  <span class="derecha">
+    <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" y="0" width="3" height="12" rx=".6"/></svg>
+    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 4.5a10 10 0 0 1 14 0M3.5 7.2a6.5 6.5 0 0 1 9 0M6 9.8a3 3 0 0 1 4 0"/></svg>
+    <svg width="26" height="12" viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><rect x=".7" y=".7" width="21" height="10.6" rx="2.5"/><rect x="2.5" y="2.5" width="16" height="7" rx="1.2" fill="currentColor" stroke="none"/><path d="M23.5 4v4" stroke-linecap="round"/></svg>
+  </span>
+</div>
+
+<img class="bloqueo-fondo" src="img/finca.jpg" alt=""><div class="bloqueo-velo"></div>
+<main class="bloqueo">
+  <div class="reloj">
+    <p class="reloj-fecha">sábado, 17 de octubre</p>
+    <p class="reloj-hora">9:41</p>
+  </div>
+  
+  <div class="push">
+    <div class="push-cab">
+      <div class="logo "><svg class="logo-mark" width="24" height="24" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#2E7D4F"/><path d="M16 25.5V14.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 14.5c0-4.6 3.3-7.6 8.2-7.6 0 4.6-3.3 7.6-8.2 7.6z" fill="#fff"/><path d="M16 18.8c0-3.5-2.6-5.8-6.6-5.8 0 3.5 2.6 5.8 6.6 5.8z" fill="#B9E3C6"/><path d="M9.5 25.5h13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".75"/></svg></div>
+      <span class="push-app">SiembraCo</span>
+      <span class="push-cuando">hace 1 h</span>
+    </div>
+    <p class="push-titulo">Tu cosecha va en camino 📦</p>
+    <p class="push-txt">Salió a las 8:30 de Finca La Esperanza. Llega <b>hoy en la tarde</b> a tu dirección en Bogotá.</p>
+  </div>
+  
+  <div class="push">
+    <div class="push-cab">
+      <div class="logo "><svg class="logo-mark" width="24" height="24" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#2E7D4F"/><path d="M16 25.5V14.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 14.5c0-4.6 3.3-7.6 8.2-7.6 0 4.6-3.3 7.6-8.2 7.6z" fill="#fff"/><path d="M16 18.8c0-3.5-2.6-5.8-6.6-5.8 0 3.5 2.6 5.8 6.6 5.8z" fill="#B9E3C6"/><path d="M9.5 25.5h13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".75"/></svg></div>
+      <span class="push-app">SiembraCo</span>
+      <span class="push-cuando">hace 3 h</span>
+    </div>
+    <p class="push-titulo">¡Cosechado! 🧺</p>
+    <p class="push-txt">Ernesto recogió tu tomate cherry esta mañana: <b>3,0 kg</b> en punto de color. Entrega estimada: <b>hoy, 17 oct</b>.</p>
+  </div>
+  
+  <div class="push">
+    <div class="push-cab">
+      <div class="logo "><svg class="logo-mark" width="24" height="24" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="#2E7D4F"/><path d="M16 25.5V14.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path d="M16 14.5c0-4.6 3.3-7.6 8.2-7.6 0 4.6-3.3 7.6-8.2 7.6z" fill="#fff"/><path d="M16 18.8c0-3.5-2.6-5.8-6.6-5.8 0 3.5 2.6 5.8 6.6 5.8z" fill="#B9E3C6"/><path d="M9.5 25.5h13" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".75"/></svg></div>
+      <span class="push-app">SiembraCo</span>
+      <span class="push-cuando">mar 13 oct</span>
+    </div>
+    <p class="push-titulo">Tu cultivo pasó a Cosecha programada 📅</p>
+    <p class="push-txt">Etapa 5 de 5. Cosecha 14 – 18 oct y entrega estimada 15 – 19 oct. Toca para ver el reporte de Ernesto.</p>
+  </div>
+  <div class="bloqueo-pie">
+    <div class="circulo-acc"><svg class="ico " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
+    <div class="circulo-acc"><svg class="ico " width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+  </div>
+</main>
+
+</div>
+</body></html>
