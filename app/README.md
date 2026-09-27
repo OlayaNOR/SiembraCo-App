@@ -29,7 +29,7 @@ Los datos vienen de `PlataformaEjemplo`, que reproduce la respuesta de la plataf
 
 - [x] Tema y colores de la marca
 - [x] Navegación con barra de pestañas
-- [ ] Modelos de datos
+- [x] Modelos de datos
 - [ ] Fuente de datos de la plataforma de siembra virtual (solo lectura, RNF-01)
 - [ ] Inicio de sesión
 - [ ] Inicio: resumen del cultivo (HU-01)
