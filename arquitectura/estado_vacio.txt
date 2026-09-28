@@ -1,0 +1,1 @@
+Estado vacio cuando no hay siembras activas 
