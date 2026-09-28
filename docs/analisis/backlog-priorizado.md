@@ -94,3 +94,13 @@ Con 34 puntos comprometidos en I3, el mínimo para cumplir el indicador (80 %) e
 ## En el tablero
 
 El backlog está cargado en Jira bajo la épica `SCRUM-5`: cada ticket lleva su criterio de aceptación, los puntos y la prioridad MoSCoW (etiqueta y prioridad nativa: Must = Highest, Should = High, Could = Low, Won't = Lowest).
+
+## Estado al cierre del diseño (27-sep)
+
+| Fase | Estado |
+|---|---|
+| Análisis (stakeholders, historias, backlog, riesgos) | Finalizado |
+| Diseño (arquitectura, diagramas de actividad, base de datos, mockups) | Finalizado; arquitectura y base de datos con ajustes menores pedidos en revisión |
+| Historias del producto (`SCRUM-6` … `SCRUM-25`) | Por hacer: se construyen en el prototipo navegable desde I3 |
+
+Ajuste pendiente: alinear el diagrama de actividad 4 (simulador) con HU-04 y RNF-02: el simulador no ejecuta la compra.
