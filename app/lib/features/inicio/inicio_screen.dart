@@ -6,6 +6,7 @@ import '../../core/utils/fechas.dart';
 import '../../data/plataforma/plataforma_ejemplo.dart';
 import '../../data/repositorios/repositorio_cultivo.dart';
 import 'widgets/anillo_avance.dart';
+import 'widgets/aviso_reporte_pendiente.dart';
 import 'widgets/tarjeta_cosecha.dart';
 
 /// Inicio: resumen del cultivo activo sin tener que navegar a otra pantalla (HU-01).
@@ -53,6 +54,10 @@ class _Resumen extends StatelessWidget {
         Text('Buenos días, Camila', style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria)),
         Text('Tu cultivo', style: texto.headlineSmall?.copyWith(fontWeight: FontWeight.w700)),
         const SizedBox(height: 16),
+          if (estado.reportePendiente) ...[
+            AvisoReportePendiente(ultimoReporte: cultivo.ultimoReporte.fecha),
+            const SizedBox(height: 14),
+          ],
         Card(
           child: Padding(
             padding: const EdgeInsets.all(18),
@@ -70,7 +75,9 @@ class _Resumen extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text('Etapa ${cultivo.etapa.numero} de 5 · ${cultivo.etapa.nombre}',
                           style: texto.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
-                      Text('En ${cultivo.etapa.nombre.toLowerCase()} desde el ${Fechas.conDia(cultivo.etapaDesde)}',
+                      Text(estado.reportePendiente
+                          ? 'Último estado confirmado el ${Fechas.corta(cultivo.ultimoReporte.fecha)}'
+                          : 'En ${cultivo.etapa.nombre.toLowerCase()} desde el ${Fechas.conDia(cultivo.etapaDesde)}',
                           style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
                     ],
                   ),
