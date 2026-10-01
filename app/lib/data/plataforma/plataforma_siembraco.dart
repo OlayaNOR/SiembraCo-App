@@ -1,6 +1,7 @@
 import '../models/alerta.dart';
 import '../models/cultivo.dart';
 import '../models/finca.dart';
+import '../models/siembra_contratada.dart';
 
 /// Acceso a la plataforma de siembra virtual existente (RNF-01).
 ///
@@ -11,6 +12,9 @@ abstract interface class PlataformaSiembraCo {
   Future<Cultivo?> cultivoActivo(String clienteId);
 
   Future<Finca> fincaDelCultivo(String cultivoId);
+
+  /// Precio, cantidad y entrega fijados al comprar. Solo lectura (RNF-02).
+  Future<SiembraContratada> siembraContratada(String cultivoId);
 
   Future<List<Alerta>> historialAlertas(String clienteId);
 }
