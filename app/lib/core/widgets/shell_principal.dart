@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../features/finca/finca_screen.dart';
 import '../../features/inicio/inicio_screen.dart';
 import 'pantalla_en_construccion.dart';
 
@@ -18,7 +19,7 @@ class _ShellPrincipalState extends State<ShellPrincipal> {
     InicioScreen(),
     PantallaEnConstruccion(titulo: 'Etapas'),
     PantallaEnConstruccion(titulo: 'Alertas'),
-    PantallaEnConstruccion(titulo: 'Finca'),
+    FincaScreen(),
   ];
 
   @override

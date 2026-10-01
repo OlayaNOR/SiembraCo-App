@@ -3,6 +3,7 @@ import '../models/cultivo.dart';
 import '../models/etapa_cultivo.dart';
 import '../models/finca.dart';
 import '../models/reporte_campo.dart';
+import '../models/siembra_contratada.dart';
 import 'plataforma_siembraco.dart';
 
 /// Respuesta de ejemplo de la plataforma, con los datos del caso.
@@ -54,6 +55,19 @@ class PlataformaEjemplo implements PlataformaSiembraCo {
       agricultor: 'Ernesto Ramírez',
       cultivosDelAgricultor: 14,
       bpaVerificadas: DateTime(2026, 9, 3),
+    );
+  }
+
+  @override
+  Future<SiembraContratada> siembraContratada(String cultivoId) async {
+    await Future<void>.delayed(_latencia);
+    return SiembraContratada(
+      producto: 'Tomate cherry orgánico',
+      cantidadKg: 3.0,
+      precioPagado: 48000,
+      entregaDesde: DateTime(2026, 10, 15),
+      entregaHasta: DateTime(2026, 10, 19),
+      ciudadEntrega: 'Bogotá',
     );
   }
 
