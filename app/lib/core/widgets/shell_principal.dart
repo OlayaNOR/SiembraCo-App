@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../features/inicio/inicio_screen.dart';
 import 'pantalla_en_construccion.dart';
 
 /// Contenedor principal con la barra de pestañas de la app.
@@ -14,7 +15,7 @@ class _ShellPrincipalState extends State<ShellPrincipal> {
   int _indice = 0;
 
   static const _pestanas = [
-    PantallaEnConstruccion(titulo: 'Inicio'),
+    InicioScreen(),
     PantallaEnConstruccion(titulo: 'Etapas'),
     PantallaEnConstruccion(titulo: 'Alertas'),
     PantallaEnConstruccion(titulo: 'Finca'),

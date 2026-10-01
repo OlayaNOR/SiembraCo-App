@@ -32,7 +32,7 @@ Los datos vienen de `PlataformaEjemplo`, que reproduce la respuesta de la plataf
 - [x] Modelos de datos
 - [x] Fuente de datos de la plataforma de siembra virtual (solo lectura, RNF-01)
 - [x] Inicio de sesión
-- [ ] Inicio: resumen del cultivo (HU-01)
+- [x] Inicio: resumen del cultivo (HU-01)
 - [ ] Inicio: fecha estimada de cosecha (HU-11)
 - [ ] Sello de validación legal (HU-07)
 - [ ] Inicio: actualización pendiente (CA-1.2)
