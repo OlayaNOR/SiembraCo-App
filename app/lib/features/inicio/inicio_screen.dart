@@ -5,6 +5,7 @@ import '../../core/utils/fechas.dart';
 import '../../data/plataforma/plataforma_ejemplo.dart';
 import '../../data/repositorios/repositorio_cultivo.dart';
 import 'widgets/anillo_avance.dart';
+import 'widgets/tarjeta_cosecha.dart';
 
 /// Inicio: resumen del cultivo activo sin tener que navegar a otra pantalla (HU-01).
 class InicioScreen extends StatefulWidget {
@@ -77,6 +78,8 @@ class _Resumen extends StatelessWidget {
             ),
           ),
         ),
+          const SizedBox(height: 14),
+          TarjetaCosecha(cultivo: cultivo),
         const SizedBox(height: 14),
         Card(
           child: ListTile(
