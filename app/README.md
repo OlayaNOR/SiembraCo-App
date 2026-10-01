@@ -34,5 +34,5 @@ Los datos vienen de `PlataformaEjemplo`, que reproduce la respuesta de la plataf
 - [x] Inicio de sesión
 - [x] Inicio: resumen del cultivo (HU-01)
 - [x] Inicio: fecha estimada de cosecha (HU-11)
-- [ ] Sello de validación legal (HU-07)
+- [x] Sello de validación legal (HU-07)
 - [ ] Inicio: actualización pendiente (CA-1.2)
