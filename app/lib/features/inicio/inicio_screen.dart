@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colores.dart';
+import '../../core/widgets/sello_legal.dart';
 import '../../core/utils/fechas.dart';
 import '../../data/plataforma/plataforma_ejemplo.dart';
 import '../../data/repositorios/repositorio_cultivo.dart';
@@ -94,6 +95,8 @@ class _Resumen extends StatelessWidget {
         const SizedBox(height: 10),
         Text('Actualizado ${Fechas.momento(cultivo.ultimoReporte.fecha)} · plataforma SiembraCo',
             style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
+          const SizedBox(height: 18),
+          const SelloLegal(revision: '15 sep 2026'),
       ],
     );
   }
