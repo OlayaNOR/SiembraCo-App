@@ -5,3 +5,6 @@ linter:
     prefer_const_constructors: true
     prefer_single_quotes: true
     always_declare_return_types: true
+
+formatter:
+  page_width: 120

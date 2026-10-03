@@ -2,12 +2,7 @@ enum TipoAlerta { cambioEtapa, reporteCampo, cambioCosecha, validacionLegal, cos
 
 /// Alerta enviada al cliente. Se conserva en el historial aunque las push estén apagadas.
 class Alerta {
-  const Alerta({
-    required this.tipo,
-    required this.titulo,
-    required this.cuerpo,
-    required this.fecha,
-  });
+  const Alerta({required this.tipo, required this.titulo, required this.cuerpo, required this.fecha});
 
   final TipoAlerta tipo;
   final String titulo;

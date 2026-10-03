@@ -18,25 +18,18 @@ abstract final class AppTheme {
     );
 
     return base.copyWith(
-      textTheme: base.textTheme.apply(
-        bodyColor: AppColores.tinta,
-        displayColor: AppColores.tinta,
-      ),
+      textTheme: base.textTheme.apply(bodyColor: AppColores.tinta, displayColor: AppColores.tinta),
       cardTheme: const CardThemeData(
         color: AppColores.tarjeta,
         elevation: 0,
         margin: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(radioTarjeta)),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(radioTarjeta))),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
           backgroundColor: AppColores.acento,
           minimumSize: const Size.fromHeight(52),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(radioChip),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radioChip)),
           textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
         ),
       ),

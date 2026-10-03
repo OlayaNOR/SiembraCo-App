@@ -54,10 +54,10 @@ class _Resumen extends StatelessWidget {
         Text('Buenos días, Camila', style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria)),
         Text('Tu cultivo', style: texto.headlineSmall?.copyWith(fontWeight: FontWeight.w700)),
         const SizedBox(height: 16),
-          if (estado.reportePendiente) ...[
-            AvisoReportePendiente(ultimoReporte: cultivo.ultimoReporte.fecha),
-            const SizedBox(height: 14),
-          ],
+        if (estado.reportePendiente) ...[
+          AvisoReportePendiente(ultimoReporte: cultivo.ultimoReporte.fecha),
+          const SizedBox(height: 14),
+        ],
         Card(
           child: Padding(
             padding: const EdgeInsets.all(18),
@@ -70,15 +70,21 @@ class _Resumen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(cultivo.producto, style: texto.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
-                      Text('${cultivo.lote} · ${cultivo.finca}, ${cultivo.municipio}',
-                          style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
+                      Text(
+                        '${cultivo.lote} · ${cultivo.finca}, ${cultivo.municipio}',
+                        style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+                      ),
                       const SizedBox(height: 8),
-                      Text('Etapa ${cultivo.etapa.numero} de 5 · ${cultivo.etapa.nombre}',
-                          style: texto.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
-                      Text(estado.reportePendiente
-                          ? 'Último estado confirmado el ${Fechas.corta(cultivo.ultimoReporte.fecha)}'
-                          : 'En ${cultivo.etapa.nombre.toLowerCase()} desde el ${Fechas.conDia(cultivo.etapaDesde)}',
-                          style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
+                      Text(
+                        'Etapa ${cultivo.etapa.numero} de 5 · ${cultivo.etapa.nombre}',
+                        style: texto.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
+                      ),
+                      Text(
+                        estado.reportePendiente
+                            ? 'Último estado confirmado el ${Fechas.corta(cultivo.ultimoReporte.fecha)}'
+                            : 'En ${cultivo.etapa.nombre.toLowerCase()} desde el ${Fechas.conDia(cultivo.etapaDesde)}',
+                        style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+                      ),
                     ],
                   ),
                 ),
@@ -86,8 +92,8 @@ class _Resumen extends StatelessWidget {
             ),
           ),
         ),
-          const SizedBox(height: 14),
-          TarjetaCosecha(cultivo: cultivo),
+        const SizedBox(height: 14),
+        TarjetaCosecha(cultivo: cultivo),
         const SizedBox(height: 14),
         Card(
           child: ListTile(
@@ -95,15 +101,19 @@ class _Resumen extends StatelessWidget {
               backgroundColor: AppColores.acentoSuave,
               child: Icon(Icons.person_outline, color: AppColores.acento),
             ),
-            title: Text('${cultivo.ultimoReporte.agricultor}, tu agricultor · ${Fechas.momento(cultivo.ultimoReporte.fecha)}'),
+            title: Text(
+              '${cultivo.ultimoReporte.agricultor}, tu agricultor · ${Fechas.momento(cultivo.ultimoReporte.fecha)}',
+            ),
             subtitle: Text('“${cultivo.ultimoReporte.nota}”'),
           ),
         ),
         const SizedBox(height: 10),
-        Text('Actualizado ${Fechas.momento(cultivo.ultimoReporte.fecha)} · plataforma SiembraCo',
-            style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
-          const SizedBox(height: 18),
-          const SelloLegal(revision: '15 sep 2026'),
+        Text(
+          'Actualizado ${Fechas.momento(cultivo.ultimoReporte.fecha)} · plataforma SiembraCo',
+          style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+        ),
+        const SizedBox(height: 18),
+        const SelloLegal(revision: '15 sep 2026'),
       ],
     );
   }
