@@ -18,10 +18,7 @@ class AnilloAvance extends StatelessWidget {
       child: CustomPaint(
         painter: _PintorAnillo(avance.clamp(0, 1)),
         child: Center(
-          child: Text(
-            '${(avance * 100).round()} %',
-            style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
-          ),
+          child: Text('${(avance * 100).round()} %', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700)),
         ),
       ),
     );

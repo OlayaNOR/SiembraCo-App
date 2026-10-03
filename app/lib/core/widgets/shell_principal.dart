@@ -25,15 +25,29 @@ class _ShellPrincipalState extends State<ShellPrincipal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: IndexedStack(index: _indice, children: _pestanas)),
+      body: SafeArea(
+        child: IndexedStack(index: _indice, children: _pestanas),
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _indice,
         onDestinationSelected: (i) => setState(() => _indice = i),
         destinations: const [
           NavigationDestination(icon: Icon(Icons.eco_outlined), selectedIcon: Icon(Icons.eco), label: 'Inicio'),
-          NavigationDestination(icon: Icon(Icons.timeline_outlined), selectedIcon: Icon(Icons.timeline), label: 'Etapas'),
-          NavigationDestination(icon: Icon(Icons.notifications_outlined), selectedIcon: Icon(Icons.notifications), label: 'Alertas'),
-          NavigationDestination(icon: Icon(Icons.agriculture_outlined), selectedIcon: Icon(Icons.agriculture), label: 'Finca'),
+          NavigationDestination(
+            icon: Icon(Icons.timeline_outlined),
+            selectedIcon: Icon(Icons.timeline),
+            label: 'Etapas',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.notifications_outlined),
+            selectedIcon: Icon(Icons.notifications),
+            label: 'Alertas',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.agriculture_outlined),
+            selectedIcon: Icon(Icons.agriculture),
+            label: 'Finca',
+          ),
         ],
       ),
     );

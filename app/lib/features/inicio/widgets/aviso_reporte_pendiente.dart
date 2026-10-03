@@ -30,8 +30,10 @@ class AvisoReportePendiente extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Actualización pendiente',
-                    style: texto.titleSmall?.copyWith(color: AppColores.aviso, fontWeight: FontWeight.w700)),
+                Text(
+                  'Actualización pendiente',
+                  style: texto.titleSmall?.copyWith(color: AppColores.aviso, fontWeight: FontWeight.w700),
+                ),
                 Text(
                   'Último reporte de campo: ${Fechas.conDia(ultimoReporte)} (hace $dias días). '
                   'Mostramos el último estado confirmado. Ya avisamos a tu agricultor y a soporte agrícola.',

@@ -45,8 +45,10 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 const Icon(Icons.eco, size: 48, color: AppColores.acento),
                 const SizedBox(height: 12),
-                Text('Tu cosecha, desde la finca hasta tu mesa',
-                    style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria)),
+                Text(
+                  'Tu cosecha, desde la finca hasta tu mesa',
+                  style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria),
+                ),
                 const SizedBox(height: 32),
                 Text('Hola de nuevo', style: texto.headlineMedium?.copyWith(fontWeight: FontWeight.w700)),
                 const SizedBox(height: 6),
