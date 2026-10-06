@@ -29,6 +29,7 @@ Documentación de gestión, análisis y diseño del proyecto. El código del pro
 **Diseño** (carpeta `diseno/` en la raíz)
 - [Mockups](../diseno/mockups/README.md)
 - [Wireframes](../diseno/wireframes/README.md)
+- [Patrones de GUI](diseno/patrones-gui.md)
 
 **Seguimiento**
 - [Seguimiento 1](seguimiento/seguimiento-1.md)
