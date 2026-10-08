@@ -39,6 +39,7 @@ Documentación de gestión, análisis y diseño del proyecto. El código del pro
 
 **Implementación**
 - [Plan del sprint I3](implementacion/sprint-i3.md)
+- [Plan del sprint I4](implementacion/sprint-i4.md)
 - [Estándares de codificación](estandares-codificacion.md)
 - [App Flutter](../app/README.md) · [Prototipo navegable](../prototipo/README.md)
 
