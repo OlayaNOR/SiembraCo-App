@@ -11,10 +11,7 @@ class PantallaEnConstruccion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        '$titulo · en desarrollo',
-        style: const TextStyle(color: AppColores.tintaSecundaria),
-      ),
+      child: Text('$titulo · en desarrollo', style: const TextStyle(color: AppColores.tintaSecundaria)),
     );
   }
 }

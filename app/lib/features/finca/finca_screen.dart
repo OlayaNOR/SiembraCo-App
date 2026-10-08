@@ -69,14 +69,18 @@ class _Contenido extends StatelessWidget {
                   children: [
                     const Icon(Icons.verified_outlined, size: 18, color: AppColores.acento),
                     const SizedBox(width: 6),
-                    Text('Buenas prácticas agrícolas verificadas · ${Fechas.corta(finca.bpaVerificadas)}',
-                        style: texto.bodySmall?.copyWith(color: AppColores.acentoOscuro)),
+                    Text(
+                      'Buenas prácticas agrícolas verificadas · ${Fechas.corta(finca.bpaVerificadas)}',
+                      style: texto.bodySmall?.copyWith(color: AppColores.acentoOscuro),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 10),
                 Text(finca.nombre, style: texto.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
-                Text('${finca.municipio}, ${finca.departamento} · ${finca.altitudMetros} m',
-                    style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria)),
+                Text(
+                  '${finca.municipio}, ${finca.departamento} · ${finca.altitudMetros} m',
+                  style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria),
+                ),
                 const Divider(height: 24),
                 Row(
                   children: [
@@ -89,8 +93,10 @@ class _Contenido extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(finca.agricultor, style: texto.titleSmall?.copyWith(fontWeight: FontWeight.w600)),
-                        Text('Agricultor aliado · ${finca.cultivosDelAgricultor} cultivos',
-                            style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
+                        Text(
+                          'Agricultor aliado · ${finca.cultivosDelAgricultor} cultivos',
+                          style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+                        ),
                       ],
                     ),
                   ],
@@ -176,7 +182,9 @@ class _Fila extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          Expanded(child: Text(etiqueta, style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria))),
+          Expanded(
+            child: Text(etiqueta, style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria)),
+          ),
           Text(valor, style: texto.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
         ],
       ),

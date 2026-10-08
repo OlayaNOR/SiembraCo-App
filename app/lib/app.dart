@@ -15,9 +15,7 @@ class SiembraCoApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.claro,
       home: const LoginScreen(),
-      routes: {
-        AppRutas.principal: (_) => const ShellPrincipal(),
-      },
+      routes: {AppRutas.principal: (_) => const ShellPrincipal()},
     );
   }
 }

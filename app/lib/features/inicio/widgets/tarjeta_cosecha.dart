@@ -31,8 +31,10 @@ class TarjetaCosecha extends StatelessWidget {
                     Fechas.rango(cultivo.cosechaDesde, cultivo.cosechaHasta),
                     style: texto.titleLarge?.copyWith(fontWeight: FontWeight.w700),
                   ),
-                  Text('Ventana de ${cultivo.diasVentanaCosecha} días · se ajusta con el clima',
-                      style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
+                  Text(
+                    'Ventana de ${cultivo.diasVentanaCosecha} días · se ajusta con el clima',
+                    style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+                  ),
                   if (anterior != null && cultivo.motivoCambioCosecha != null) ...[
                     const SizedBox(height: 8),
                     Text(

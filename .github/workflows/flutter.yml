@@ -1,0 +1,36 @@
+name: App Flutter
+
+on:
+  pull_request:
+    branches: [develop, main]
+    paths: ['app/**', '.github/workflows/flutter.yml']
+  push:
+    branches: [develop, main]
+    paths: ['app/**', '.github/workflows/flutter.yml']
+
+jobs:
+  calidad:
+    name: Formato, análisis y pruebas
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Dependencias
+        run: flutter pub get
+
+      - name: Formato
+        run: dart format --output=none --set-exit-if-changed lib test
+
+      - name: Análisis estático
+        run: flutter analyze
+
+      - name: Pruebas
+        run: flutter test

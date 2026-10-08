@@ -10,9 +10,8 @@ abstract final class Fechas {
   static String conDia(DateTime f) => '${_dias[f.weekday - 1]} ${corta(f)}';
 
   /// `14 – 18 oct`, o `30 sep – 4 oct` si cambia el mes.
-  static String rango(DateTime desde, DateTime hasta) => desde.month == hasta.month
-      ? '${desde.day} – ${corta(hasta)}'
-      : '${corta(desde)} – ${corta(hasta)}';
+  static String rango(DateTime desde, DateTime hasta) =>
+      desde.month == hasta.month ? '${desde.day} – ${corta(hasta)}' : '${corta(desde)} – ${corta(hasta)}';
 
   /// `hoy 7:40` o `20 sep, 16:10`
   static String momento(DateTime f, {DateTime? ahora}) {
