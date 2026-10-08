@@ -35,6 +35,7 @@ Documentación de gestión, análisis y diseño del proyecto. El código del pro
 
 **Seguimiento**
 - [Seguimiento 1](seguimiento/seguimiento-1.md)
+- [Reporte del sprint I3](seguimiento/reporte-sprint-i3.md)
 
 **Implementación**
 - [Plan del sprint I3](implementacion/sprint-i3.md)
