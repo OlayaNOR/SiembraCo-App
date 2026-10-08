@@ -9,7 +9,9 @@ Documentación de gestión, análisis y diseño del proyecto. El código del pro
 | `planeacion/` | Cronograma, esquema metodológico, roles y presupuesto |
 | `analisis/` | Contexto del caso, backlog priorizado, entendimiento del negocio |
 | `seguimiento/` | Reportes quincenales e indicadores |
+| `diseno/` | Patrones de GUI |
 | `implementacion/` | Plan de cada sprint de desarrollo |
+| `pruebas/` | Plan y reportes de pruebas |
 
 ## Índice
 
@@ -38,3 +40,6 @@ Documentación de gestión, análisis y diseño del proyecto. El código del pro
 - [Plan del sprint I3](implementacion/sprint-i3.md)
 - [Estándares de codificación](estandares-codificacion.md)
 - [App Flutter](../app/README.md) · [Prototipo navegable](../prototipo/README.md)
+
+**Pruebas**
+- [Plan de la fase de pruebas](pruebas/plan-de-pruebas.md)
