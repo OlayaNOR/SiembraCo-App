@@ -144,7 +144,10 @@ class _TarjetaSiembra extends StatelessWidget {
             _Fila(etiqueta: 'Producto', valor: siembra.producto),
             _Fila(etiqueta: 'Cantidad contratada', valor: '$cantidad kg'),
             _Fila(etiqueta: 'Precio pagado', valor: Moneda.pesos(siembra.precioPagado)),
-            _Fila(etiqueta: 'Precio por kilo', valor: Moneda.porUnidad(siembra.precioPagado, siembra.cantidadKg)),
+            _Fila(
+              etiqueta: 'Precio por kilo (referencia)',
+              valor: Moneda.porUnidad(siembra.precioPagado, siembra.cantidadKg),
+            ),
             _Fila(
               etiqueta: 'Entrega estimada',
               valor: '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta)} · ${siembra.ciudadEntrega}',

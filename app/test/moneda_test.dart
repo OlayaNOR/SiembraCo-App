@@ -11,7 +11,11 @@ void main() {
 
     test('calcula el precio por kilo redondeado al peso', () {
       expect(Moneda.porUnidad(168000, 12), '\$ 14.000 COP / kg');
-      expect(Moneda.porUnidad(100000, 3), '\$ 33.333 COP / kg');
+      expect(Moneda.porUnidad(48000, 3), '\$ 16.000 COP / kg');
+    });
+
+    test('sin cantidad no calcula precio por unidad', () {
+      expect(Moneda.porUnidad(48000, 0), 'Sin dato');
     });
   });
 }
