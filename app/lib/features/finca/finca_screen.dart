@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colores.dart';
 import '../../core/utils/fechas.dart';
+import '../../core/utils/moneda.dart';
 import '../../core/widgets/sello_legal.dart';
 import '../../data/models/finca.dart';
 import '../../data/models/siembra_contratada.dart';
@@ -28,10 +29,7 @@ class _FincaScreenState extends State<FincaScreen> {
   /// de esperar una antes de pedir la otra: el tiempo de carga pasa de la suma
   /// de ambas al de la más lenta.
   Future<(Finca, SiembraContratada)> _cargar() {
-    return (
-      widget.plataforma.fincaDelCultivo('lote-14'),
-      widget.plataforma.siembraContratada('lote-14'),
-    ).wait;
+    return (widget.plataforma.fincaDelCultivo('lote-14'), widget.plataforma.siembraContratada('lote-14')).wait;
   }
 
   @override
@@ -73,14 +71,18 @@ class _Contenido extends StatelessWidget {
                   children: [
                     const Icon(Icons.verified_outlined, size: 18, color: AppColores.acento),
                     const SizedBox(width: 6),
-                    Text('Buenas prácticas agrícolas verificadas · ${Fechas.corta(finca.bpaVerificadas)}',
-                        style: texto.bodySmall?.copyWith(color: AppColores.acentoOscuro)),
+                    Text(
+                      'Buenas prácticas agrícolas verificadas · ${Fechas.corta(finca.bpaVerificadas)}',
+                      style: texto.bodySmall?.copyWith(color: AppColores.acentoOscuro),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 10),
                 Text(finca.nombre, style: texto.titleLarge?.copyWith(fontWeight: FontWeight.w700)),
-                Text('${finca.municipio}, ${finca.departamento} · ${finca.altitudMetros} m',
-                    style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria)),
+                Text(
+                  '${finca.municipio}, ${finca.departamento} · ${finca.altitudMetros} m',
+                  style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria),
+                ),
                 const Divider(height: 24),
                 Row(
                   children: [
@@ -93,8 +95,10 @@ class _Contenido extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(finca.agricultor, style: texto.titleSmall?.copyWith(fontWeight: FontWeight.w600)),
-                        Text('Agricultor aliado · ${finca.cultivosDelAgricultor} cultivos',
-                            style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria)),
+                        Text(
+                          'Agricultor aliado · ${finca.cultivosDelAgricultor} cultivos',
+                          style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+                        ),
                       ],
                     ),
                   ],
@@ -118,16 +122,6 @@ class _TarjetaSiembra extends StatelessWidget {
 
   final SiembraContratada siembra;
 
-  static String pesos(int valor) {
-    final digitos = valor.toString();
-    final buffer = StringBuffer();
-    for (var i = 0; i < digitos.length; i++) {
-      if (i > 0 && (digitos.length - i) % 3 == 0) buffer.write('.');
-      buffer.write(digitos[i]);
-    }
-    return '\$ $buffer COP';
-  }
-
   @override
   Widget build(BuildContext context) {
     final texto = Theme.of(context).textTheme;
@@ -150,7 +144,11 @@ class _TarjetaSiembra extends StatelessWidget {
             const SizedBox(height: 12),
             _Fila(etiqueta: 'Producto', valor: siembra.producto),
             _Fila(etiqueta: 'Cantidad contratada', valor: '$cantidad kg'),
-            _Fila(etiqueta: 'Precio pagado', valor: pesos(siembra.precioPagado)),
+            _Fila(etiqueta: 'Precio pagado', valor: Moneda.pesos(siembra.precioPagado)),
+            _Fila(
+              etiqueta: 'Precio por kilo (referencia)',
+              valor: Moneda.porUnidad(siembra.precioPagado, siembra.cantidadKg),
+            ),
             _Fila(
               etiqueta: 'Entrega estimada',
               valor: '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta)} · ${siembra.ciudadEntrega}',
@@ -180,7 +178,9 @@ class _Fila extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          Expanded(child: Text(etiqueta, style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria))),
+          Expanded(
+            child: Text(etiqueta, style: texto.bodyMedium?.copyWith(color: AppColores.tintaSecundaria)),
+          ),
           Text(valor, style: texto.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
         ],
       ),
