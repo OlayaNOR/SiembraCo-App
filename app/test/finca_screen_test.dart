@@ -16,6 +16,17 @@ void main() {
     expect(find.text('\$ 48.000 COP'), findsOneWidget);
   });
 
+  testWidgets('muestra el precio por kilo de referencia con su unidad (HU-12)', (tester) async {
+    await abrir(tester);
+    expect(find.text('Precio por kilo (referencia)'), findsOneWidget);
+    expect(find.text('\$ 16.000 COP / kg'), findsOneWidget);
+  });
+
+  testWidgets('muestra la entrega con el año y la ciudad (HU-12)', (tester) async {
+    await abrir(tester);
+    expect(find.text('15 – 19 oct 2026 · Bogotá'), findsOneWidget);
+  });
+
   testWidgets('no permite editar precio, cantidad ni condiciones (RNF-02)', (tester) async {
     await abrir(tester);
     expect(find.byType(TextField), findsNothing);

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colores.dart';
 import '../../core/utils/fechas.dart';
+import '../../core/utils/moneda.dart';
 import '../../core/widgets/sello_legal.dart';
 import '../../data/models/finca.dart';
 import '../../data/models/siembra_contratada.dart';
@@ -24,10 +25,11 @@ class FincaScreen extends StatefulWidget {
 class _FincaScreenState extends State<FincaScreen> {
   late final Future<(Finca, SiembraContratada)> _datos = _cargar();
 
-  Future<(Finca, SiembraContratada)> _cargar() async {
-    final finca = await widget.plataforma.fincaDelCultivo('lote-14');
-    final siembra = await widget.plataforma.siembraContratada('lote-14');
-    return (finca, siembra);
+  /// Las dos consultas son independientes, así que se lanzan a la vez en lugar
+  /// de esperar una antes de pedir la otra: el tiempo de carga pasa de la suma
+  /// de ambas al de la más lenta.
+  Future<(Finca, SiembraContratada)> _cargar() {
+    return (widget.plataforma.fincaDelCultivo('lote-14'), widget.plataforma.siembraContratada('lote-14')).wait;
   }
 
   @override
@@ -120,16 +122,6 @@ class _TarjetaSiembra extends StatelessWidget {
 
   final SiembraContratada siembra;
 
-  static String pesos(int valor) {
-    final digitos = valor.toString();
-    final buffer = StringBuffer();
-    for (var i = 0; i < digitos.length; i++) {
-      if (i > 0 && (digitos.length - i) % 3 == 0) buffer.write('.');
-      buffer.write(digitos[i]);
-    }
-    return '\$ $buffer COP';
-  }
-
   @override
   Widget build(BuildContext context) {
     final texto = Theme.of(context).textTheme;
@@ -152,10 +144,15 @@ class _TarjetaSiembra extends StatelessWidget {
             const SizedBox(height: 12),
             _Fila(etiqueta: 'Producto', valor: siembra.producto),
             _Fila(etiqueta: 'Cantidad contratada', valor: '$cantidad kg'),
-            _Fila(etiqueta: 'Precio pagado', valor: pesos(siembra.precioPagado)),
+            _Fila(etiqueta: 'Precio pagado', valor: Moneda.pesos(siembra.precioPagado)),
+            _Fila(
+              etiqueta: 'Precio por kilo (referencia)',
+              valor: Moneda.porUnidad(siembra.precioPagado, siembra.cantidadKg),
+            ),
             _Fila(
               etiqueta: 'Entrega estimada',
-              valor: '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta)} · ${siembra.ciudadEntrega}',
+              valor:
+                  '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta, conAnio: true)} · ${siembra.ciudadEntrega}',
             ),
             const SizedBox(height: 10),
             Text(
