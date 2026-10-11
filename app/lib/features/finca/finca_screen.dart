@@ -151,7 +151,8 @@ class _TarjetaSiembra extends StatelessWidget {
             ),
             _Fila(
               etiqueta: 'Entrega estimada',
-              valor: '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta)} · ${siembra.ciudadEntrega}',
+              valor:
+                  '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta, conAnio: true)} · ${siembra.ciudadEntrega}',
             ),
             const SizedBox(height: 10),
             Text(
