@@ -75,9 +75,8 @@ HU-11 no estaba en el documento de análisis: el caso pide explícitamente mostr
 
 Con 34 puntos comprometidos en I3, el mínimo para cumplir el indicador (80 %) es **28 puntos**.
 
-**Lo que se ejecutó:** I3 cerró los 34 puntos Must y adelantó HU-02, que entró con RNF-02 en el PR #4. En la planeación
-del 8-oct, I4 se comprometió con lo que quedaba sin construir en la app: HU-12 y HU-08 (8 puntos). HU-04, HU-05 y HU-13
-están en el prototipo previo en HTML y se llevan al prototipo en Figma. Detalle en el
+**Lo que se ejecutó:** I3 cerró los 34 puntos Must y adelantó HU-02 (PR #4), HU-04, HU-05 y HU-13 (prototipo).
+En la planeación del 8-oct, I4 se comprometió con lo que quedaba: HU-12 y HU-08 (8 puntos). Detalle en el
 [reporte del sprint I4](../seguimiento/reporte-sprint-i4.md).
 
 ## Resumen
@@ -118,7 +117,8 @@ Ajuste pendiente: alinear el diagrama de actividad 4 (simulador) con HU-04 y RNF
 | HU-02 | 5 | Should | I3 (adelantada) | Finalizado | PR #4 |
 | HU-12 | 3 | Should | I4 | Finalizado | PR #6 |
 | HU-08 | 5 | Should | I4 | En revisión | PR #7 |
-| HU-04 · HU-05 | 8 | Should | — | En el prototipo previo en HTML | Pasan al prototipo en Figma (I6) |
-| HU-13 · HU-14 · HU-15 | 13 | Could | — | Por hacer | Entran solo si sobra capacidad |
+| HU-04 · HU-05 | 8 | Should | I3 (adelantadas) | Finalizado | Prototipo: simulador y mensajes educativos |
+| HU-13 | 5 | Could | I3 (adelantada) | Finalizado | Prototipo: línea de tiempo de etapas |
+| HU-14 · HU-15 | 8 | Could | — | Por hacer | Entran solo si sobra capacidad |
 
-**Avance:** 47 de 68 puntos activos en la app (69 %); 34 de 34 Must y 13 de 21 Should.
+**Avance:** 55 de 68 puntos activos finalizados (81 %) y 60 (88 %) al integrar HU-08. Must 34/34 · Should 16/21 (21/21 con HU-08) · Could 5/13.

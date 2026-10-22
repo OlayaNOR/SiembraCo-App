@@ -36,7 +36,8 @@ No se activó la reserva de contingencia. El costo de I6 sube en esos $4.050.000
 | HU-08 | Indicadores de buenas prácticas agrícolas por finca | 5 | SCRUM-15 | Terminado el 22-oct, en revisión | PR #7: tarjeta BPA en Finca y su prueba de widget |
 | | **Total** | **8** | | | |
 
-Las Could (HU-14 y HU-15) no entraron: no sobró capacidad.
+Las Could HU-14 y HU-15 no entraron: no sobró capacidad. HU-02, HU-04, HU-05 y HU-13, que el tablero tenía en I4, ya
+se habían adelantado en I3 y no cuentan como compromiso de este sprint.
 
 ## 3. Tareas
 
