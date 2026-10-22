@@ -47,4 +47,16 @@ gantt
     Seguimiento 3        :milestone, m3, 2026-11-16, 1d
 ```
 
+## Estado al 22 de octubre
+
+| Fase | Plan | Real | Diferencia |
+|---|---|---|---|
+| 1 · Análisis | 27 ago – 9 sep | 27 ago – 9 sep | — |
+| 2 · Diseño | 10 – 23 sep | 10 – 23 sep | — (en el seguimiento 1 se pidieron ajustes menores a la arquitectura y la base de datos) |
+| 3 · Implementación | 24 sep – 21 oct | 24 sep – 22 oct | **+1 día**: HU-08 terminó el 22-oct; el corte del seguimiento 2 se tomó ese día, como permitió el cliente |
+| 4 · Pruebas | 22 oct – 4 nov | Inicia el 22 oct | Sin cambio |
+
+**Cambio del 15-oct:** el cliente indicó que el prototipo funcional se muestra en la implantación. El prototipo en
+Figma pasa de I4 a I6 y la semana de contingencia sigue libre.
+
 El cronograma cubre lo que pide la sección 2.11 del documento del caso: inicio y cierre de cada fase, entregas quincenales, hitos principales y espacios de contingencia.
