@@ -75,6 +75,11 @@ HU-11 no estaba en el documento de análisis: el caso pide explícitamente mostr
 
 Con 34 puntos comprometidos en I3, el mínimo para cumplir el indicador (80 %) es **28 puntos**.
 
+**Lo que se ejecutó:** I3 cerró los 34 puntos Must y adelantó HU-02, que entró con RNF-02 en el PR #4. En la planeación
+del 8-oct, I4 se comprometió con lo que quedaba sin construir en la app: HU-12 y HU-08 (8 puntos). HU-04, HU-05 y HU-13
+están en el prototipo previo en HTML y se llevan al prototipo en Figma. Detalle en el
+[reporte del sprint I4](../seguimiento/reporte-sprint-i4.md).
+
 ## Resumen
 
 | Prioridad | Ítems | Puntos | % |
@@ -104,3 +109,16 @@ El backlog está cargado en Jira bajo la épica `SCRUM-5`: cada ticket lleva su 
 | Historias del producto (`SCRUM-6` … `SCRUM-25`) | Por hacer: se construyen en el prototipo navegable desde I3 |
 
 Ajuste pendiente: alinear el diagrama de actividad 4 (simulador) con HU-04 y RNF-02: el simulador no ejecuta la compra.
+
+## Estado al corte del Seguimiento 2 (22-oct)
+
+| ID | Pts | Prioridad | Iteración | Estado | Evidencia |
+|---|---|---|---|---|---|
+| HU-01 · HU-11 · HU-03 · HU-06 · HU-07 · RNF-01 · RNF-02 | 34 | Must | I3 | Finalizado | App 0.1.0 y [reporte del sprint I3](../seguimiento/reporte-sprint-i3.md) |
+| HU-02 | 5 | Should | I3 (adelantada) | Finalizado | PR #4 |
+| HU-12 | 3 | Should | I4 | Finalizado | PR #6 |
+| HU-08 | 5 | Should | I4 | En revisión | PR #7 |
+| HU-04 · HU-05 | 8 | Should | — | En el prototipo previo en HTML | Pasan al prototipo en Figma (I6) |
+| HU-13 · HU-14 · HU-15 | 13 | Could | — | Por hacer | Entran solo si sobra capacidad |
+
+**Avance:** 47 de 68 puntos activos en la app (69 %); 34 de 34 Must y 13 de 21 Should.

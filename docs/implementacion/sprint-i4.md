@@ -26,6 +26,9 @@ de moneda que usa el simulador.
 | Revisión de *pull requests* y de GUI (SCRUM-49) | Cada PR con al menos una aprobación y la integración continua en verde |
 | Preparación del Seguimiento 2 | Avance técnico, indicadores de I3 e I4, presupuesto y riesgos |
 
+> **Cambio del 15-oct:** el prototipo navegable en Figma pasa a I6, porque el cliente indicó que el prototipo
+> funcional se presenta en la implantación. Cierre del sprint: [reporte del sprint I4](../seguimiento/reporte-sprint-i4.md).
+
 ## Forma de trabajo
 
 - Ramas `feature/<id>-<descripcion>` desde `develop`, un PR por historia con la plantilla del repositorio.
