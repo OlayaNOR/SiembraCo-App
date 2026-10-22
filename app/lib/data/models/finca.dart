@@ -1,3 +1,5 @@
+import 'indicador_bpa.dart';
+
 /// Finca asignada donde se ejecuta la siembra virtual.
 class Finca {
   const Finca({
@@ -8,6 +10,7 @@ class Finca {
     required this.agricultor,
     required this.cultivosDelAgricultor,
     required this.bpaVerificadas,
+    this.indicadoresBpa = const [],
   });
 
   final String nombre;
@@ -19,4 +22,7 @@ class Finca {
 
   /// Fecha de la última verificación de buenas prácticas agrícolas (HU-08).
   final DateTime bpaVerificadas;
+
+  /// Indicadores de buenas prácticas agrícolas de la última verificación (HU-08).
+  final List<IndicadorBpa> indicadoresBpa;
 }

@@ -27,6 +27,19 @@ void main() {
     expect(find.text('15 – 19 oct 2026 · Bogotá'), findsOneWidget);
   });
 
+  testWidgets('muestra cada indicador de buenas prácticas con su fecha de verificación (HU-08)', (tester) async {
+    tester.view.physicalSize = const Size(1080, 2600);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await abrir(tester);
+    expect(find.text('Buenas prácticas agrícolas'), findsOneWidget);
+    expect(find.text('3 de 4 indicadores cumplen'), findsOneWidget);
+    expect(find.text('Uso seguro de agroquímicos'), findsOneWidget);
+    expect(find.text('Cumple · verificado 3 sep'), findsNWidgets(3));
+    expect(find.text('Manejo de residuos de cosecha'), findsOneWidget);
+    expect(find.text('En revisión desde 10 oct'), findsOneWidget);
+  });
+
   testWidgets('no permite editar precio, cantidad ni condiciones (RNF-02)', (tester) async {
     await abrir(tester);
     expect(find.byType(TextField), findsNothing);
