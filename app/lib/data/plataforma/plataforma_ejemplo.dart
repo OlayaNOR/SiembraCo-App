@@ -2,6 +2,7 @@ import '../models/alerta.dart';
 import '../models/cultivo.dart';
 import '../models/etapa_cultivo.dart';
 import '../models/finca.dart';
+import '../models/indicador_bpa.dart';
 import '../models/reporte_campo.dart';
 import '../models/siembra_contratada.dart';
 import 'plataforma_siembraco.dart';
@@ -55,6 +56,20 @@ class PlataformaEjemplo implements PlataformaSiembraCo {
       agricultor: 'Ernesto Ramírez',
       cultivosDelAgricultor: 14,
       bpaVerificadas: DateTime(2026, 9, 3),
+      indicadoresBpa: [
+        IndicadorBpa(nombre: 'Uso seguro de agroquímicos', estado: EstadoBpa.cumple, verificado: DateTime(2026, 9, 3)),
+        IndicadorBpa(nombre: 'Calidad del agua de riego', estado: EstadoBpa.cumple, verificado: DateTime(2026, 9, 3)),
+        IndicadorBpa(
+          nombre: 'Registro de trazabilidad del lote',
+          estado: EstadoBpa.cumple,
+          verificado: DateTime(2026, 9, 3),
+        ),
+        IndicadorBpa(
+          nombre: 'Manejo de residuos de cosecha',
+          estado: EstadoBpa.enRevision,
+          verificado: DateTime(2026, 10, 10),
+        ),
+      ],
     );
   }
 
