@@ -2,6 +2,19 @@
 
 Formato: [versionado semántico](https://semver.org/lang/es/). Las fechas son de publicación en `main`.
 
+## [0.2.0] — 19 de noviembre de 2026 · cierre del sprint I4 y del proyecto
+
+Segunda versión de la app con las historias **Should** del sprint I4.
+
+### Nuevo
+- Finca: precio por kilo y formato de moneda con unidad, para que el cliente sepa qué pagó (HU-12).
+- Finca: indicadores de buenas prácticas agrícolas con su fecha de verificación (HU-08).
+
+### Proyecto
+- Integración continua con la versión de Flutter fijada en 3.47.7, para que el análisis sea reproducible.
+- Reporte del sprint I4 y documentación del Seguimiento 2.
+- Prototipo navegable de alta fidelidad en Figma, con las correcciones de la prueba de usabilidad.
+
 ## [0.1.0] — 8 de octubre de 2026 · cierre del sprint I3
 
 Primera versión de la app con las historias **Must** del backlog.
