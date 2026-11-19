@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 import '../../core/theme/app_colores.dart';
 import '../../core/utils/fechas.dart';
+import '../../core/utils/moneda.dart';
 import '../../core/widgets/sello_legal.dart';
 import '../../data/models/finca.dart';
+import '../../data/models/indicador_bpa.dart';
 import '../../data/models/siembra_contratada.dart';
 import '../../data/plataforma/plataforma_ejemplo.dart';
 import '../../data/plataforma/plataforma_siembraco.dart';
 
-/// Finca asignada y condiciones de la siembra (HU-02, RNF-02).
+/// Finca asignada, condiciones de la siembra y buenas prácticas agrícolas (HU-02, HU-08, RNF-02).
 ///
 /// Precio, cantidad y entrega se muestran tal como vienen de la plataforma:
 /// la pantalla no tiene ningún control para editarlos.
@@ -24,10 +26,11 @@ class FincaScreen extends StatefulWidget {
 class _FincaScreenState extends State<FincaScreen> {
   late final Future<(Finca, SiembraContratada)> _datos = _cargar();
 
-  Future<(Finca, SiembraContratada)> _cargar() async {
-    final finca = await widget.plataforma.fincaDelCultivo('lote-14');
-    final siembra = await widget.plataforma.siembraContratada('lote-14');
-    return (finca, siembra);
+  /// Las dos consultas son independientes, así que se lanzan a la vez en lugar
+  /// de esperar una antes de pedir la otra: el tiempo de carga pasa de la suma
+  /// de ambas al de la más lenta.
+  Future<(Finca, SiembraContratada)> _cargar() {
+    return (widget.plataforma.fincaDelCultivo('lote-14'), widget.plataforma.siembraContratada('lote-14')).wait;
   }
 
   @override
@@ -107,6 +110,10 @@ class _Contenido extends StatelessWidget {
         ),
         const SizedBox(height: 14),
         _TarjetaSiembra(siembra: siembra),
+        if (finca.indicadoresBpa.isNotEmpty) ...[
+          const SizedBox(height: 14),
+          _TarjetaBpa(indicadores: finca.indicadoresBpa),
+        ],
         const SizedBox(height: 18),
         const SelloLegal(revision: '15 sep 2026'),
       ],
@@ -119,16 +126,6 @@ class _TarjetaSiembra extends StatelessWidget {
   const _TarjetaSiembra({required this.siembra});
 
   final SiembraContratada siembra;
-
-  static String pesos(int valor) {
-    final digitos = valor.toString();
-    final buffer = StringBuffer();
-    for (var i = 0; i < digitos.length; i++) {
-      if (i > 0 && (digitos.length - i) % 3 == 0) buffer.write('.');
-      buffer.write(digitos[i]);
-    }
-    return '\$ $buffer COP';
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -152,10 +149,15 @@ class _TarjetaSiembra extends StatelessWidget {
             const SizedBox(height: 12),
             _Fila(etiqueta: 'Producto', valor: siembra.producto),
             _Fila(etiqueta: 'Cantidad contratada', valor: '$cantidad kg'),
-            _Fila(etiqueta: 'Precio pagado', valor: pesos(siembra.precioPagado)),
+            _Fila(etiqueta: 'Precio pagado', valor: Moneda.pesos(siembra.precioPagado)),
+            _Fila(
+              etiqueta: 'Precio por kilo (referencia)',
+              valor: Moneda.porUnidad(siembra.precioPagado, siembra.cantidadKg),
+            ),
             _Fila(
               etiqueta: 'Entrega estimada',
-              valor: '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta)} · ${siembra.ciudadEntrega}',
+              valor:
+                  '${Fechas.rango(siembra.entregaDesde, siembra.entregaHasta, conAnio: true)} · ${siembra.ciudadEntrega}',
             ),
             const SizedBox(height: 10),
             Text(
@@ -164,6 +166,77 @@ class _TarjetaSiembra extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Indicadores de buenas prácticas agrícolas de la finca, cada uno con su fecha (HU-08).
+class _TarjetaBpa extends StatelessWidget {
+  const _TarjetaBpa({required this.indicadores});
+
+  final List<IndicadorBpa> indicadores;
+
+  @override
+  Widget build(BuildContext context) {
+    final texto = Theme.of(context).textTheme;
+    final cumplen = indicadores.where((i) => i.estado == EstadoBpa.cumple).length;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Buenas prácticas agrícolas', style: texto.titleMedium?.copyWith(fontWeight: FontWeight.w700)),
+            const SizedBox(height: 2),
+            Text(
+              '$cumplen de ${indicadores.length} indicadores cumplen',
+              style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+            ),
+            const SizedBox(height: 8),
+            for (final indicador in indicadores) _FilaBpa(indicador: indicador),
+            const SizedBox(height: 6),
+            Text(
+              'Verificación del equipo de calidad agrícola de SiembraCo en la finca.',
+              style: texto.bodySmall?.copyWith(color: AppColores.tintaSecundaria),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _FilaBpa extends StatelessWidget {
+  const _FilaBpa({required this.indicador});
+
+  final IndicadorBpa indicador;
+
+  @override
+  Widget build(BuildContext context) {
+    final texto = Theme.of(context).textTheme;
+    final cumple = indicador.estado == EstadoBpa.cumple;
+    final color = cumple ? AppColores.acentoOscuro : AppColores.aviso;
+    final estado = cumple
+        ? 'Cumple · verificado ${Fechas.corta(indicador.verificado)}'
+        : 'En revisión desde ${Fechas.corta(indicador.verificado)}';
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(cumple ? Icons.check_circle_outline : Icons.schedule, size: 18, color: color),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(indicador.nombre, style: texto.bodyMedium?.copyWith(fontWeight: FontWeight.w600)),
+                Text(estado, style: texto.bodySmall?.copyWith(color: color)),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
